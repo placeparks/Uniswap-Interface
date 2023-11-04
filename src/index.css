@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --accent-color-from: hsl(193, 45%, 55%); /* Soothing Teal */
+  --accent-color-to: hsl(207, 60%, 55%); /* Soft Sky Blue */
+  --accent-color: linear-gradient(
+    90deg,
+    var(--accent-color-from),
+    var(--accent-color-to)
+  );
+  --primary-background-color: hsl(207, 66%, 90%); /* Very Light Sky Blue */
+  --secondary-background-color: hsl(193, 45%, 85%); /* Light Teal */
+  --tertiary-background-color: hsl(193, 45%, 75%); /* Slightly Darker Teal */
+  --primary-font-color: hsl(207, 35%, 20%); /* Dark Slate Blue for text */
+  --secondary-font-color: hsl(207, 35%, 40%); /* Medium Slate Blue for less important text */
+  --border-color: hsl(207, 35%, 70%); /* Light Slate Blue for borders */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  background: var(--primary-background-color);
+  color-scheme: light;
+  font-family: sans-serif;
+  color: var(--primary-font-color);
+}
+
+p {
+  margin: 0;
+}
+
+/* Apply the gradient to specific elements like headers or sections instead of the whole body if preferred */
+.header {
+  background: var(--accent-color);
+}
+
+.border-element {
+  border: 1px solid var(--border-color);
+}
+
+.secondary-text {
+  color: var(--secondary-font-color);
 }
