@@ -66,6 +66,7 @@ const SwapCard = () => {
           <div className={styles.formGroup}>
             <input
               className={styles.formControl}
+              style={{color:"white"}}
               type="text"
               placeholder="Amount out"
               disabled
